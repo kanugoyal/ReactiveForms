@@ -21,4 +21,9 @@ export class AppComponent {
       hobbies: new FormControl(null),
     });
   }
+
+  onSubmit(){
+    return this.reactiveForm;
+
+  }
 }
