@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ReactiveForms';
+
+  reactiveForm: FormGroup;
+
+  ngOnInit(){
+    this.reactiveForm=new FormGroup({
+      firstname: new FormControl('Abby'),
+      lastname: new FormControl('James'),
+      email: new FormControl('ajames@abc.com'),
+      gender: new FormControl('female'),
+      country: new FormControl('canada'),
+      hobbies: new FormControl(null),
+    });
+  }
 }
